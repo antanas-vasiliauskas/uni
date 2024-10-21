@@ -1,0 +1,14 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/vietove"
+    elementFormDefault="qualified"
+    xmlns:viet="http://example.com/vietove">
+    <xs:element name="vietove">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="platuma" type="xs:decimal"/>
+                <xs:element name="ilguma" type="xs:decimal"/>
+                <xs:element name="zemynas" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

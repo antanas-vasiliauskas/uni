@@ -1,0 +1,227 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/salis"
+    elementFormDefault="qualified">
+
+    <xs:import namespace="http://example.com/vietove" 
+               schemaLocation="vietove.xsd"/>
+    <xs:import namespace="http://example.com/valiuta" 
+               schemaLocation="valiuta.xsd"/>
+
+    <xs:element name="salis">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="duomenu_data" type="xs:date"/>
+                <xs:element name="pavadinimas" type="xs:string"/>
+                <xs:element name="geografija">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="viet:vietove"/>
+                            <xs:element name="laiko_zonos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="laiko_zona" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="plotas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="viso" type="xs:integer"/>
+                                        <xs:element name="sausuma" type="xs:integer"/>
+                                        <xs:element name="vanduo" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="kaimynai">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="kaimynas" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="klimatas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="temperatura">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ziemos_vid">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="min" type="xs:integer"/>
+                                                            <xs:attribute name="max" type="xs:integer"/>
+                                                            <xs:attribute name="unit" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="pavasario_vid">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="min" type="xs:integer"/>
+                                                            <xs:attribute name="max" type="xs:integer"/>
+                                                            <xs:attribute name="unit" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="vasaros_vid">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="min" type="xs:integer"/>
+                                                            <xs:attribute name="max" type="xs:integer"/>
+                                                            <xs:attribute name="unit" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="rudens_vid">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="min" type="xs:integer"/>
+                                                            <xs:attribute name="max" type="xs:integer"/>
+                                                            <xs:attribute name="unit" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="krituliai">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="metiniai">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="min" type="xs:integer"/>
+                                                            <xs:attribute name="max" type="xs:integer"/>
+                                                            <xs:attribute name="unit" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="slapiausias_sezonas" type="xs:string"/>
+                                                    <xs:element name="sausiausias_sezonas" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+
+                <xs:element name="ekonomika">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="bvp">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="viso">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="unit" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="zmogui">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:decimal">
+                                                        <xs:attribute name="unit" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="sektoriai">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="agrikultura">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="procentas" type="xs:decimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="pramone">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="procentas" type="xs:decimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="paslaugos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="procentas" type="xs:decimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element ref="val:valiuta"/>
+                            <xs:element name="nedarbingumas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="procentas" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="metine_inflacija">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="procentas" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+
+                <xs:element name="demografija">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="populiacija">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="viso" type="xs:integer"/>
+                                        <xs:element name="gimstamumas" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="amziaus_grupes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="grupe" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="procentas" type="xs:decimal"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="amzius" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="rastingumas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="procentas" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="vidutine_gyvenimo_trukme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="viso" type="xs:decimal"/>
+                                        <xs:element name="vyrai" type="xs:decimal"/>
+                                        <xs:element name="moterys" type="xs:decimal"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="iso_alpha2" type="xs:string"/>
+            <xs:attribute name="iso_alpha3" type="xs:string"/>
+            <xs:attribute name="phone_prefix" type="xs:string"/>
+            <xs:attribute name="domain" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

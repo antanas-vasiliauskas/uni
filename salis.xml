@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:salis 
+    iso_alpha2="LT" 
+    iso_alpha3="LTU" 
+    phone_prefix="+370" 
+    domain=".lt" 
+    xmlns:s="http://example.com/salis"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="">
+    <s:duomenu_data>2024-10-13</s:duomenu_data>
+    <s:pavadinimas>Lietuva</s:pavadinimas>
+    <s:geografija>
+        <viet:vietove xmlns:viet="http://example.com/vietove">
+            <viet:platuma>55.1694</viet:platuma>
+            <viet:ilguma>23.8813</viet:ilguma>
+            <viet:zemynas>Europa</viet:zemynas>
+        </viet:vietove>
+        <s:laiko_zonos>
+            <s:laiko_zona>GMT+2</s:laiko_zona>
+            <s:laiko_zona>GMT+3</s:laiko_zona>
+        </s:laiko_zonos>
+        <s:plotas>
+            <viso>65300</viso>
+            <sausuma>62680</sausuma>
+            <vanduo>2620</vanduo>
+        </s:plotas>
+        <s:kaimynai>
+            <s:kaimynas>Lenkija</s:kaimynas>
+            <s:kaimynas>Latvija</s:kaimynas>
+            <s:kaimynas>Rusija</s:kaimynas>
+            <s:kaimynas>Baltarusija</s:kaimynas>
+        </s:kaimynai>
+        <s:klimatas>
+            <s:temperatura>
+                <s:ziemos_vid min="-5" max="0" unit="Celsius"/>
+                <s:pavasario_vid min="6" max="12" unit="Celsius"/>
+                <s:vasaros_vid min="16" max="20" unit="Celsius"/>
+                <s:rudens_vid min="6" max="12" unit="Celsius"/>
+            </s:temperatura>
+            <s:krituliai>
+                <s:metiniai min="600" max="900" unit="mm"/>
+                <s:slapiausias_sezonas>vasara</s:slapiausias_sezonas>
+                <s:sausiausias_sezonas>ziema</s:sausiausias_sezonas>
+            </s:krituliai>
+        </s:klimatas>
+    </s:geografija>
+    <s:ekonomika>
+        <s:bvp>
+            <s:viso unit="USD">85999000000</s:viso>
+            <s:zmogui unit="USD">31118</s:zmogui>
+        </s:bvp>
+        <s:sektoriai>
+            <s:agrikultura>
+                <s:procentas>2.8</s:procentas>
+            </s:agrikultura>
+            <s:pramone>
+                <s:procentas>23.5</s:procentas>
+            </s:pramone>
+            <s:paslaugos>
+                <s:procentas>73.7</s:procentas>
+            </s:paslaugos>
+        </s:sektoriai>
+        <valiuta xlmns="http://example.com/valiuta">
+            <pavadinimas>Euras</pavadinimas>
+            <kodas>EUR</kodas>
+        </valiuta>
+        <s:nedarbingumas>
+            <s:procentas>6.5</s:procentas>
+        </s:nedarbingumas>
+        <s:metine_inflacija>
+            <s:procentas>5.6</s:procentas>
+        </s:metine_inflacija>
+    </s:ekonomika>
+    <s:demografija>
+        <s:populiacija>
+            <s:viso>2859110</s:viso>
+            <s:gimstamumas>1.48</s:gimstamumas>
+        </s:populiacija>
+        <s:amziaus_grupes>
+            <s:grupe amzius="0-14">
+                <s:procentas>14.5</s:procentas>
+            </s:grupe>
+            <s:grupe amzius="15-64">
+                <s:procentas>66.8</s:procentas>
+            </s:grupe>
+            <s:grupe amzius="65+">
+                <s:procentas>18.7</s:procentas>
+            </s:grupe>
+        </s:amziaus_grupes>
+        <s:rastingumas>
+            <s:procentas>99.8</s:procentas>
+        </s:rastingumas>
+        <s:vidutine_gyvenimo_trukme>
+            <s:viso>75.8</s:viso>
+            <s:vyrai>73.2</s:vyrai>
+            <s:moterys>78.4</s:moterys> 
+        </s:vidutine_gyvenimo_trukme>
+    </s:demografija>
+</s:salis>

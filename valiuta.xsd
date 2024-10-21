@@ -1,0 +1,13 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/valiuta"
+    elementFormDefault="qualified"
+    xmlns:val="http://example.com/valiuta">
+    <xs:element name="valiuta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pavadinimas" type="xs:string"/>
+                <xs:element name="kodas" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
