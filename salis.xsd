@@ -1,11 +1,13 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://example.com/salis"
-    elementFormDefault="qualified">
+    elementFormDefault="qualified"
+    xmlns:viet="http://example.com/vietove"
+    xmlns:val="http://example.com/valiuta">
 
     <xs:import namespace="http://example.com/vietove" 
-               schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/vietove.xsd"/>
+               schemaLocation="vietove.xsd"/>
     <xs:import namespace="http://example.com/valiuta" 
-               schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/valiuta.xsd"/>
+               schemaLocation="valiuta.xsd"/>
 
     <xs:element name="salis">
         <xs:complexType>

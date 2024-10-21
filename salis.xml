@@ -6,7 +6,7 @@
     domain=".lt" 
     xmlns:s="http://example.com/salis"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/salis.xsd">
+    xsi:schemaLocation="http://example.com/salis salis.xsd http://example.com/vietove vietove.xsd http://example.com/valiuta valiuta.xsd">
     <s:duomenu_data>2024-10-13</s:duomenu_data>
     <s:pavadinimas>Lietuva</s:pavadinimas>
     <s:geografija>
@@ -20,9 +20,9 @@
             <s:laiko_zona>GMT+3</s:laiko_zona>
         </s:laiko_zonos>
         <s:plotas>
-            <viso>65300</viso>
-            <sausuma>62680</sausuma>
-            <vanduo>2620</vanduo>
+            <s:viso>65300</s:viso>
+            <s:sausuma>62680</s:sausuma>
+            <s:vanduo>2620</s:vanduo>
         </s:plotas>
         <s:kaimynai>
             <s:kaimynas>Lenkija</s:kaimynas>
@@ -60,7 +60,7 @@
                 <s:procentas>73.7</s:procentas>
             </s:paslaugos>
         </s:sektoriai>
-        <valiuta xlmns="http://example.com/valiuta">
+        <valiuta xmlns="http://example.com/valiuta">
             <pavadinimas>Euras</pavadinimas>
             <kodas>EUR</kodas>
         </valiuta>
