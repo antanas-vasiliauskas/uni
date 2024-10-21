@@ -3,9 +3,9 @@
     elementFormDefault="qualified">
 
     <xs:import namespace="http://example.com/vietove" 
-               schemaLocation="vietove.xsd"/>
+               schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/vietove.xsd"/>
     <xs:import namespace="http://example.com/valiuta" 
-               schemaLocation="valiuta.xsd"/>
+               schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/valiuta.xsd"/>
 
     <xs:element name="salis">
         <xs:complexType>

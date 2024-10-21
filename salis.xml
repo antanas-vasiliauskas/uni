@@ -6,7 +6,7 @@
     domain=".lt" 
     xmlns:s="http://example.com/salis"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="">
+    xsi:schemaLocation="https://github.com/antanas-vasiliauskas/uni/blob/main/salis.xsd">
     <s:duomenu_data>2024-10-13</s:duomenu_data>
     <s:pavadinimas>Lietuva</s:pavadinimas>
     <s:geografija>
