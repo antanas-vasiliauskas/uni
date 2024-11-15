@@ -1,0 +1,14 @@
+<Sandėlis xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Prekės>
+        <Prekė>
+            <Pavadinimas>Miltai</Pavadinimas>
+            <Kiekis vienetas="kg">50000</Kiekis>
+        </Prekė>
+        <Prekė>
+            <Pavadinimas>Kiaušiniai</Pavadinimas>
+            <Kiekis vienetas="vnt">2000</Kiekis>
+            <Atvežimo_data>2021-10-21</Atvežimo_data>
+        </Prekė>
+    </Prekės>
+</Sandėlis>

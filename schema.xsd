@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Sandėlis">
+        <xs:complexType>
+           <xs:sequence>
+                 <xs:element name="Prekės">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Prekė" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Pavadinimas" type="xs:string"/>
+                                    <xs:element name="Kiekis">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="xs:decimal">
+                                                    <xs:attribute name="vienetas" type="xs:string" use="required"/>
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="Atvežimo_data" type="xs:date" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+           </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
