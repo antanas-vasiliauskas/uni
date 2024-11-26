@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <s:salis 
-    iso_alpha2="LT" 
-    iso_alpha3="LTU" 
     phone_prefix="+370" 
     domain=".lt" 
     xmlns:s="http://example.com/salis"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://example.com/salis salis.xsd http://example.com/vietove vietove.xsd http://example.com/valiuta valiuta.xsd">
+    <!-- 7 -->
+    <s:iso_alpha2>LT</s:iso_alpha2>
+    <!--<s:iso_alpha3>LTU</s:iso_alpha3>--> 
     <s:duomenu_data>2024-10-13</s:duomenu_data>
     <s:pavadinimas>Lietuva</s:pavadinimas>
     <s:geografija>
@@ -36,6 +37,7 @@
                 <s:pavasario_vid min="6" max="12" unit="Celsius"/>
                 <s:vasaros_vid min="16" max="20" unit="Celsius"/>
                 <s:rudens_vid min="6" max="12" unit="Celsius"/>
+                <s:menesiu_vid>-4.5 -3.1 1.7 7.6 13.2 16.5 18.4 17.6 13.5 8.2 2.4 -1.8</s:menesiu_vid>
             </s:temperatura>
             <s:krituliai>
                 <s:metiniai min="600" max="900" unit="mm"/>
@@ -43,6 +45,26 @@
                 <s:sausiausias_sezonas>ziema</s:sausiausias_sezonas>
             </s:krituliai>
         </s:klimatas>
+        <s:miestai>
+            <s:miestas>
+                <s:pavadinimas>Vilnius</s:pavadinimas>
+            </s:miestas>
+            <s:miestas>
+                <s:pavadinimas>Kaunas</s:pavadinimas>
+            </s:miestas>
+            <s:miestas>
+                <s:pavadinimas>Klaipėda</s:pavadinimas>
+            </s:miestas>
+            <s:miestas>
+                <s:pavadinimas>Šiauliai</s:pavadinimas>
+            </s:miestas>
+            <s:miestas>
+                <s:pavadinimas>Panevėžys</s:pavadinimas>
+            </s:miestas>
+        </s:miestai>
+        <s:sostine>
+            <s:pavadinimas>Vilnius</s:pavadinimas>
+        </s:sostine>
     </s:geografija>
     <s:ekonomika>
         <s:bvp>
@@ -96,4 +118,9 @@
             <s:moterys>78.4</s:moterys> 
         </s:vidutine_gyvenimo_trukme>
     </s:demografija>
+    <s:istorija>
+        Lietuva yra viena iš seniausių Europos valstybių, įkurta 1236 metais.
+        <s:ivykis>1990 metais Lietuva paskelbė nepriklausomybę nuo Sovietų Sąjungos.</s:ivykis>
+        <s:ivykis>2004 metais Lietuva tapo Europos Sąjungos nare.</s:ivykis>
+    </s:istorija>
 </s:salis>

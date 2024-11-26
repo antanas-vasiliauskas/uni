@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "studentai",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "studentId": {
+                "type": "string",
+                "pattern": "^[A-Z]{1}[0-9]{4}$"
+            },
+            "name": {
+                "type": "string"
+            },
+            "age": {
+                "type": "integer"
+            },
+            "phone": {
+                "type": "string",
+                "pattern": "\\+\\d{3} \\d{3} \\d{5}"
+            },
+            "email": {
+                "title": "Email address",
+                "type": "string",
+                "pattern": "^\\S+@\\S+\\.\\S+$",
+                "format": "email",
+                "minLength": 6,
+                "maxLength": 127
+            },
+            "courses": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": ["studentId", "name", "age", "courses"]
+    }
+}

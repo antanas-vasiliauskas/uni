@@ -1,0 +1,73 @@
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 1rem;
+}
+
+section{
+    padding: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 500px;
+}
+
+#last-section{
+    margin-top: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1000px;
+    background: #f1f1f1;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+}
+
+form > * {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    max-width: 200px;
+}
+
+form > label{
+    margin-top: 0;
+    padding: 0;
+}

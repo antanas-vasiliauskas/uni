@@ -1,128 +1,119 @@
 {
-    "salis": {
-        "@iso_alpha2": "LT",
-        "@iso_alpha3": "LTU",
-        "@phone_prefix": "+370",
-        "@domain": ".lt",
-        "duomenu_data": "2024-10-13",
-        "pavadinimas": "Lietuva",
-        "geografija": {
-          "vietove": {
-            "platuma": "55.1694",
-            "ilguma": "23.8813",
-            "zemynas": "Europa"
+  "$schema": "./salis_schema.json",
+  "salis": {
+    "phone_prefix": "+370",
+    "domain": ".lt",
+    "iso_alpha2": "LT",
+    "duomenu_data": "2024-10-13",
+    "pavadinimas": "Lietuva",
+    "geografija": {
+      "vietove": {
+        "platuma": 55.1694,
+        "ilguma": 23.8813,
+        "zemynas": "Europa"
+      },
+      "laiko_zonos": {
+        "laiko_zona": ["GMT+2", "GMT+3"]
+      },
+      "plotas": {
+        "viso": 65300,
+        "sausuma": 62680,
+        "vanduo": 2620
+      },
+      "kaimynai": {
+        "kaimynas": ["Lenkija", "Latvija", "Rusija", "Baltarusija"]
+      },
+      "klimatas": {
+        "temperatura": {
+          "ziemos_vid": {
+            "min": -5,
+            "max": 0,
+            "unit": "Celsius"
           },
-          "laiko_zonos": [
-            "GMT+2",
-            "GMT+3"
-          ],
-          "plotas": {
-            "viso": "65300",
-            "sausuma": "62680",
-            "vanduo": "2620"
+          "pavasario_vid": {
+            "min": 6,
+            "max": 12,
+            "unit": "Celsius"
           },
-          "kaimynai": [
-            "Lenkija",
-            "Latvija",
-            "Rusija",
-            "Baltarusija"
-          ],
-          "klimatas": {
-            "temperatura": {
-              "ziemos_vid": {
-                "@min": "-5",
-                "@max": "0",
-                "@unit": "Celsius"
-              },
-              "pavasario_vid": {
-                "@min": "6",
-                "@max": "12",
-                "@unit": "Celsius"
-              },
-              "vasaros_vid": {
-                "@min": "16",
-                "@max": "20",
-                "@unit": "Celsius"
-              },
-              "rudens_vid": {
-                "@min": "6",
-                "@max": "12",
-                "@unit": "Celsius"
-              }
-            },
-            "krituliai": {
-              "metiniai": {
-                "@min": "600",
-                "@max": "900",
-                "@unit": "mm"
-              },
-              "slapiausias_sezonas": "vasara",
-              "sausiausias_sezonas": "ziema"
-            }
-          }
+          "vasaros_vid": {
+            "min": 16,
+            "max": 20,
+            "unit": "Celsius"
+          },
+          "rudens_vid": {
+            "min": 6,
+            "max": 12,
+            "unit": "Celsius"
+          },
+          "menesiu_vid": [-4.5, -3.1, 1.7, 7.6, 13.2, 16.5, 18.4, 17.6, 13.5, 8.2, 2.4, -1.8]
         },
-        "ekonomika": {
-          "bvp": {
-            "viso": {
-              "@unit": "USD",
-              "kiekis": "85999000000"
-            },
-            "zmogui": {
-              "@unit": "USD",
-              "kiekis": "31118"
-            }
+        "krituliai": {
+          "metiniai": {
+            "min": 600,
+            "max": 900,
+            "unit": "mm"
           },
-          "sektoriai": {
-            "agrikultura": {
-              "procentas": "2.8"
-            },
-            "pramone": {
-              "procentas": "23.5"
-            },
-            "paslaugos": {
-              "procentas": "73.7"
-            }
-          },
-          "valiuta": {
-            "pavadinimas": "Euras",
-            "kodas": "EUR"
-          },
-          "nedarbingumas": {
-            "procentas": "6.5"
-          },
-          "metine_inflacija": {
-            "procentas": "5.6"
-          }
-        },
-        "demografija": {
-          "populiacija": {
-            "viso": "2859110",
-            "gimstamumas": "1.48"
-          },
-          "amziaus_grupes": {
-            "grupe": [
-              {
-                "@amzius": "0-14",
-                "procentas": "14.5"
-              },
-              {
-                "@amzius": "15-64",
-                "procentas": "66.8"
-              },
-              {
-                "@amzius": "65+",
-                "procentas": "18.7"
-              }
-            ]
-          },
-          "rastingumas": {
-            "procentas": "99.8"
-          },
-          "vidutine_gyvenimo_trukme": {
-            "viso": "75.8",
-            "vyrai": "73.2",
-            "moterys": "78.4"
-          }
+          "slapiausias_sezonas": "vasara",
+          "sausiausias_sezonas": "ziema"
         }
+      },
+      "miestai": {
+        "miestas": [
+          {"pavadinimas": "Vilnius"},
+          {"pavadinimas": "Kaunas"},
+          {"pavadinimas": "Klaipėda"},
+          {"pavadinimas": "Šiauliai"},
+          {"pavadinimas": "Panevėžys"}
+        ]
+      },
+      "sostine": {
+        "pavadinimas": "Vilnius"
+      },
+      "zemynas": "Europa"
+    },
+    "ekonomika": {
+      "bvp": {
+        "viso": 85999000000,
+        "zmogui": 31118,
+        "unit": "USD"
+      },
+      "sektoriai": {
+        "agrikultura": {"procentas": 2.8},
+        "pramone": {"procentas": 23.5},
+        "paslaugos": {"procentas": 73.7}
+      },
+      "valiuta": {
+        "pavadinimas": "Euras",
+        "kodas": "EUR"
+      },
+      "nedarbingumas": {"procentas": 6.5},
+      "metine_inflacija": {"procentas": 5.6}
+    },
+    "demografija": {
+      "populiacija": {
+        "viso": 2859110,
+        "gimstamumas": 1.48
+      },
+      "amziaus_grupes": {
+        "grupe": [
+          {"amzius": "0-14", "procentas": 14.5},
+          {"amzius": "15-64", "procentas": 66.8},
+          {"amzius": "65+", "procentas": 18.7}
+        ]
+      },
+      "rastingumas": {"procentas": 99.8},
+      "vidutine_gyvenimo_trukme": {
+        "viso": 75.8,
+        "vyrai": 73.2,
+        "moterys": 78.4
+      }
+    },
+    "istorija": {
+      "text": "Lietuva yra viena iš seniausių Europos valstybių, įkurta 1236 metais.",
+      "ivykis": [
+        "1990 metais Lietuva paskelbė nepriklausomybę nuo Sovietų Sąjungos.",
+        "2004 metais Lietuva tapo Europos Sąjungos nare."
+      ]
     }
+  }
 }

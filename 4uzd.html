@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4 užduotis</title>
+        <link rel="stylesheet" type="text/css" href="4uzd.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="4uzd.js"></script>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h3>Studento forma</h3>
+                <form id="student-form">
+                    <label for="name">Studento vardas:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="surname">Pavardė:</label>
+                    <input type="text" id="surname" name="surname">
+                    <label for="email">El. paštas:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="id">Studento ID:</label>
+                    <input type="number" id="id" name="id">
+                    <button type="submit">Pridėti</button>
+                </form>
+            </section>
+            <section>
+                <h3>Studentai</h3>
+                <table id="students-table">
+                    <thead>
+                        <tr>
+                            <th>Vardas</th>
+                            <th>Pavardė</th>
+                            <th>El. paštas</th>
+                            <th>Studento ID</th>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+            <section id="last-section">
+                <div class="container">
+                    <button id="show-btn">Rodyti elementą</button>
+                    <button id="hide-btn">Slėpti elementą</button>
+                    <div>Elementas</div>
+                </div>
+
+                <br/>
+                <div class="container">
+                    <button id="change-text-btn">Pakeisti tekstinį turinį</button>
+                    <textarea></textarea>
+                    <p>Tekstas</p>
+                </div>
+
+                <br/>
+
+                <div class="container">
+                    <button id="change-style-btn">Pakeisti elemnto stilių</button>
+                    <div>Elementas</div>
+                </div>
+
+                <br/>
+                
+                <div class="container">
+                    <button id="delete-paragraph-btn">Ištrinti paragrafą</button>
+                    <select id="paragraph-select"></select>
+                    <div id="paragraphs">
+                        <p>Pirmas paragrafas</p>
+                        <p>Antras paragrafas</p>
+                        <p>Trečias paragrafas</p>
+                        <p>Ketvirtas paragrafas</p>
+                        <p>Penktas paragrafas</p>
+                        <p>Šeštas paragrafas</p>
+                        <p>Septintas paragrafas</p>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="container">
+                    <button id="add-paragraph-btn">Pridėti paragrafą</button>
+                    <textarea></textarea>
+                    <div id="paragraphs2"></div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

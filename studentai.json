@@ -1,0 +1,23 @@
+[
+    {
+        "studentId": "A1234",
+        "name": "John Doe",
+        "age": 20,
+        "email": "john.doe@example.com",
+        "courses": [
+            "Algorithms and Data Structures",
+            "Objective Oriented Programming"
+        ]
+    },
+    {
+        "studentId": "B2345",
+        "name": "Jane Doe",
+        "age": 22,
+        "phone": "+370 123 12345",
+        "courses": [
+            "Machine Learning",
+            "Data Mining",
+            "Randomized Algorithms"
+        ]
+    }
+]

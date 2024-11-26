@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lietuva</title>
+    <link rel="stylesheet" href="salis.css">
+</head>
+<body>
+    <header>
+        <h1 id="header-text">Lietuva</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#geografija">Geografija</a></li>
+            <li class="nav-item"><a href="#ekonomika">Ekonomika</a></li>
+            <li class="nav-item"><a id="nav-item-3" href="#demografija">Demografija</a></li>
+            <li class="nav-item"><a href="#istorija">Istorija</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="geografija"> <!--3.1-->
+            <h2>Geografija</h2>
+            <p>Plotas: 65300 km²</p>
+            <p>Sausuma: 62680 km²</p>
+            <p>Vanduo: 2620 km²</p>
+            <h3>Miestai</h3>
+            <ul>
+                <li>Vilnius</li>
+                <li>Kaunas</li>
+                <li>Klaipėda</li>
+                <li>Šiauliai</li>
+                <li>Panevėžys</li>
+            </ul>
+            <h3>Kaimynai</h3>
+            <ul>
+                <li><a href="https://lt.wikipedia.org/wiki/Lenkija">Lenkija</a></li> <!--3.3-->
+                <li>Latvija</li>
+                <li>Rusija</li>
+                <li>Baltarusija</li>
+            </ul>
+        </section>
+        <section id="ekonomika">
+            <h2>Ekonomika</h2>
+            <p>BVP: 85,999,000,000 USD</p>
+            <p>BVP vienam žmogui: 31,118 USD</p>
+            <h3>Sektoriai</h3>
+             <!--3.5-->
+            <ul>
+                <li>Agrikultura: 2.8%</li>
+                <li>Pramonė: 23.5%</li>
+                <li>Paslaugos: 73.7%</li>
+            </ul>
+        </section>
+        <section id="demografija">
+            <h2>Demografija</h2>
+            <p>Populiacija: 2,859,110</p>
+            <p>Gimstamumas: 1.48</p>
+            <h3></h3>
+            <!--3.4-->
+            <table>
+                <tr>
+                    <th colspan="2">Amžiaus grupės</th>
+                </tr>
+                <tr>
+                    <th>Amžius</th>
+                    <th>Procentas</th>
+                </tr>
+                <tr>
+                    <td>0-14</td>
+                    <td>14.5%</td>
+                </tr>
+                <tr>
+                    <td>15-32</td>
+                    <td rowspan="2">66.8%</td>
+                </tr>
+                <tr>
+                    <td>32-64</td>
+                </tr>
+                <tr>
+                    <td>65+</td>
+                    <td>18.7%</td>
+                </tr>
+            </table>
+        </section>
+        <section id="istorija">
+            <h2>Istorija</h2>
+            <p>Lietuva yra viena iš seniausių Europos valstybių, įkurta 1236 metais.</p>
+            <ul>
+                <li>1990 metais Lietuva paskelbė nepriklausomybę nuo Sovietų Sąjungos.</li>
+                <li>2004 metais Lietuva tapo Europos Sąjungos nare.</li>
+            </ul>
+            <br>
+            <p>Šalies vėliava</p>
+            <!--3.2-->
+            <img width="200" alt="vėliava" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/200px-Flag_of_Lithuania.svg.png"/>
+            <br>
+            <p>Šalies herbas</p>
+            <img width="200" alt="herbas" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coat_of_arms_of_Lithuania.svg/1200px-Coat_of_arms_of_Lithuania.svg.png"/>
+        </section>
+        <aside>
+            <h4>Susisiekit su mumis</h2>
+             <!--3.6 text, email, tel, data, textarea-->
+            <form action="./salis.html" method="get">
+                <label for="name">Vardas:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">El. paštas:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Telefonas:</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="date">Gimimo data:</label>
+                <input type="date" id="date" name="date">
+                <label for="subject">Tema:</label>
+                <!--3.7-->
+                <select id="subject" name="subject" size="1">
+                    <option value="contact">Susisiekti su mumis</option>
+                    <option value="misinformation">Pranšti apie netikslumą</option>
+                    <option value="bug">Pranšti apie klaidą</option>
+                </select>
+                <label for="message">Žinutė:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Siųsti</button>
+
+            </form>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lietuva</p>
+    </footer>
+</body>
+</html>

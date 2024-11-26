@@ -1,0 +1,369 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+      "TemperaturaType": {
+          "type": "object",
+          "properties": {
+          "min": {
+              "type": "number"
+          },
+          "max": {
+              "type": "number"
+          },
+          "unit": {
+              "type": "string"
+          }
+          },
+          "required": ["min", "max", "unit"]
+      }
+      },
+    "title": "Salis",
+    "type": "object",
+    "properties": {
+      "salis": {
+        "type": "object",
+        "properties": {
+          "phone_prefix": {
+            "type": "string",
+            "pattern": "^\\+\\d+$"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "iso_alpha2": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "duomenu_data": {
+            "type": "string",
+            "format": "date"
+          },
+          "pavadinimas": {
+            "type": "string"
+          },
+          "geografija": {
+            "type": "object",
+            "properties": {
+              "vietove": {
+                "type": "object",
+                "properties": {
+                  "platuma": {
+                    "type": "number"
+                  },
+                  "ilguma": {
+                    "type": "number"
+                  },
+                  "zemynas": {
+                    "type": "string"
+                  }
+                },
+                "required": ["platuma", "ilguma", "zemynas"]
+              },
+              "laiko_zonos": {
+                "type": "object",
+                "properties": {
+                  "laiko_zona": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": ["laiko_zona"]
+              },
+              "plotas": {
+                "type": "object",
+                "properties": {
+                  "viso": {
+                    "type": "number"
+                  },
+                  "sausuma": {
+                    "type": "number"
+                  },
+                  "vanduo": {
+                    "type": "number"
+                  }
+                },
+                "required": ["viso", "sausuma", "vanduo"]
+              },
+              "kaimynai": {
+                "type": "object",
+                "properties": {
+                  "kaimynas": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": ["kaimynas"]
+              },
+              "klimatas": {
+                "type": "object",
+                "properties": {
+                    "temperatura": {
+                    "type": "object",
+                    "properties": {
+                        "ziemos_vid": {
+                        "$ref": "#/definitions/TemperaturaType"
+                        },
+                        "pavasario_vid": {
+                        "$ref": "#/definitions/TemperaturaType"
+                        },
+                        "vasaros_vid": {
+                        "$ref": "#/definitions/TemperaturaType"
+                        },
+                        "rudens_vid": {
+                        "$ref": "#/definitions/TemperaturaType"
+                        },
+                        "menesiu_vid": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        },
+                        "minItems": 12,
+                        "maxItems": 12
+                        }
+                    },
+                    "required": ["ziemos_vid", "pavasario_vid", "vasaros_vid", "rudens_vid", "menesiu_vid"]
+                    },
+                  "krituliai": {
+                    "type": "object",
+                    "properties": {
+                      "metiniai": {
+                        "type": "object",
+                        "properties": {
+                          "min": {
+                            "type": "number"
+                          },
+                          "max": {
+                            "type": "number"
+                          },
+                          "unit": {
+                            "type": "string"
+                          }
+                        },
+                        "required": ["min", "max", "unit"]
+                      },
+                      "slapiausias_sezonas": {
+                        "type": "string"
+                      },
+                      "sausiausias_sezonas": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["metiniai", "slapiausias_sezonas", "sausiausias_sezonas"]
+                  }
+                },
+                "required": ["temperatura", "krituliai"]
+              },
+              "miestai": {
+                "type": "object",
+                "properties": {
+                  "miestas": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "pavadinimas": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["pavadinimas"]
+                    }
+                  }
+                },
+                "required": ["miestas"]
+              },
+              "sostine": {
+                "type": "object",
+                "properties": {
+                  "pavadinimas": {
+                    "type": "string"
+                  }
+                },
+                "required": ["pavadinimas"]
+              },
+              "zemynas": {
+                "type": "string",
+                "enum": ["Europa", "Azija", "Afrika", "Šiaurės Amerika", "Pietų Amerika", "Australija", "Antarktida"]
+              }
+            },
+            "required": ["vietove", "laiko_zonos", "plotas", "kaimynai", "klimatas", "miestai", "sostine", "zemynas"]
+          },
+          "ekonomika": {
+            "type": "object",
+            "properties": {
+              "bvp": {
+                "allOf": [
+                    {
+                    "type": "object",
+                    "properties": {
+                        "viso": {
+                        "type": "number"
+                        }
+                    }
+                    },
+                    {
+                    "type": "object",
+                    "properties": {
+                        "zmogui": {
+                        "type": "number"
+                        },
+                        "unit": {
+                        "type": "string"
+                        }
+                    }
+                    }
+                ]
+              },
+              "sektoriai": {
+                "type": "object",
+                "properties": {
+                  "agrikultura": {
+                    "type": "object",
+                    "properties": {
+                      "procentas": {
+                        "type": "number"
+                      }
+                    },
+                    "required": ["procentas"]
+                  },
+                  "pramone": {
+                    "type": "object",
+                    "properties": {
+                      "procentas": {
+                        "type": "number"
+                      }
+                    },
+                    "required": ["procentas"]
+                  },
+                  "paslaugos": {
+                    "type": "object",
+                    "properties": {
+                      "procentas": {
+                        "type": "number"
+                      }
+                    },
+                    "required": ["procentas"]
+                  }
+                },
+                "required": ["agrikultura", "pramone", "paslaugos"]
+              },
+              "valiuta": {
+                "type": "object",
+                "properties": {
+                  "pavadinimas": {
+                    "type": "string"
+                  },
+                  "kodas": {
+                    "type": "string"
+                  }
+                },
+                "required": ["pavadinimas", "kodas"]
+              },
+              "nedarbingumas": {
+                "type": "object",
+                "properties": {
+                  "procentas": {
+                    "type": "number"
+                  }
+                },
+                "required": ["procentas"]
+              },
+              "metine_inflacija": {
+                "type": "object",
+                "properties": {
+                  "procentas": {
+                    "type": "number"
+                  }
+                },
+                "required": ["procentas"]
+              }
+            },
+            "required": ["bvp", "sektoriai", "valiuta", "nedarbingumas", "metine_inflacija"]
+          },
+          "demografija": {
+            "type": "object",
+            "properties": {
+              "populiacija": {
+                "type": "object",
+                "properties": {
+                  "viso": {
+                    "type": "number"
+                  },
+                  "gimstamumas": {
+                    "type": "number"
+                  }
+                },
+                "required": ["viso", "gimstamumas"]
+              },
+              "amziaus_grupes": {
+                "type": "object",
+                "properties": {
+                  "grupe": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "amzius": {
+                          "type": "string"
+                        },
+                        "procentas": {
+                          "type": "number"
+                        }
+                      },
+                      "required": ["amzius", "procentas"]
+                    }
+                  }
+                },
+                "required": ["grupe"]
+              },
+              "rastingumas": {
+                "type": "object",
+                "properties": {
+                  "procentas": {
+                    "type": "number"
+                  }
+                },
+                "required": ["procentas"]
+              },
+              "vidutine_gyvenimo_trukme": {
+                "type": "object",
+                "properties": {
+                  "viso": {
+                    "type": "number"
+                  },
+                  "vyrai": {
+                    "type": "number"
+                  },
+                  "moterys": {
+                    "type": "number"
+                  }
+                },
+                "required": ["viso", "vyrai", "moterys"]
+              }
+            },
+            "required": ["populiacija", "amziaus_grupes", "rastingumas", "vidutine_gyvenimo_trukme"]
+          },
+          "istorija": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "ivykis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["text", "ivykis"]
+          }
+        },
+        "required": ["phone_prefix", "domain", "iso_alpha2", "duomenu_data", "pavadinimas", "geografija", "ekonomika", "demografija", "istorija"]
+      }
+    },
+    "required": ["salis"]
+  }
